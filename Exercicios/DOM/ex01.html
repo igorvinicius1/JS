@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--<meta http-equiv="refresh" content="1.0"> tag q faz a pagina atualizar a cd 1 segundo-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body
+        {
+            background: linear-gradient(to right, rgb(21, 21, 235), rgb(47, 47, 228), rgb(95, 95, 197));
+            background-attachment: fixed;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM (Documente Object Model)</h1>
+    <h2 class="yu">bllbggogg</h2>
+
+    <p>Frase do paragrafo</p>
+    <p class="teste"><strong>Segunda frase com paragrafo</strong></p>
+    <div id="msg">div</div>
+
+    <script>
+        window.document.write(window.document.URL); //retorna a URL do arquivo, elementos "DOM"
+
+        var p1 = window.document.getElementsByTagName('p')[0] //comlchete determina qual 'p' pegar se primeiro segundo ou terceiro ...
+
+        window.document.write("<br>O primeiro p está escrito: </br>" + p1.innerText)
+
+        p1.style.color = 'pink'
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'brown'
+        d.innerText = 'Mudando o conteudo da tag...' //altera o conteudo da tag com JS
+
+        // querySelector and ClassName do not work in this fucking code and I dont know why 
+
+        var c = window.document.getElementsByClassName('teste')
+        c.innerText = 'mudouuuuu'
+        c.style.background = 'red'
+
+        var e = window.document.querySelector('div#msg')
+        e.style.background = 'red'
+
+    </script>
+</body>
+</html>
