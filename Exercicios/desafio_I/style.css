@@ -1,0 +1,41 @@
+body
+{
+    background-color: rgba(231, 52, 52, 0.74);
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+div
+{
+    text-align: center;
+    padding: 5px;
+}
+
+
+header
+{
+    color: white;
+    text-align: center;
+}
+
+section
+{
+    background-color:white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 500px;
+    margin: auto; /* centraliza */
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.24); 
+}
+
+footer
+{
+    color: black;
+    text-align: center;
+    font-style: oblique;
+}
