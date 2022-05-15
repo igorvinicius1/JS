@@ -14,54 +14,57 @@ function verificar()
         var fsex = document.getElementsByName('radsex') //pega os elementos de acordo com sua posição de registro 
         var idade = ano - Number(fano.value)
         var genero=''
+        var img = document.createElement('img')// cria uma tag "img", porém pelo JS
+        img.setAttribute('id', 'foto')// como se criasse no HTML <img> id="foto</img>"
 
 
         if(fsex[0].checked)//se o fsex (masculino) foi selecionado então...
         {   
             genero = 'Homem'
 
-            // if(idade >= 0 && idade <= 10)
-            // {
-            //     img.setAttribute('src', './imagens/foto-bebe-m.png')
-            // }
-            // else if(idade <= 21)
-            // {
-            //     img.setAttribute('src', './imagens/foto-jovem-m.png')
-            // }
-            // else if(idade <= 65)
-            // {
-            //     img.setAttribute('src', './imagens/foto-adulto-m.png')
-            // }
-            // else
-            // {
-            //     img.setAttribute('src','./imagens/foto-idoso-m.png')
-            //     //img.setAttribute('src','foto-idoso-m.png')
-            // }
+            if(idade >= 0 && idade <= 10)
+            {
+                // img.setAttribute('src', './imagens/foto-bebe-m.png') //acrescentar o source da imagem e o caminho
+            }
+            else if(idade <= 21)
+            {
+                img.setAttribute('src', './imagens/foto-jovem-m.png')
+            }
+            else if(idade <= 65)
+            {
+                img.setAttribute('src', './imagens/foto-adulto-m.png')
+            }
+            else
+            {
+                img.setAttribute('src','./imagens/foto-idoso-m.png')
+                //img.setAttribute('src','foto-idoso-m.png')
+            }
         } 
         else if(fsex[1].checked)
         {
             genero = 'Mulher'
 
-            // if(idade >= 0 && idade <= 10)
-            // {
-            //     img.setAttribute('src', './imagens/foto-bebe-f.png')
-            // }
-            // else if(idade <= 21)
-            // {
-            //     img.setAttribute('src', './imagens/foto-jovem-f.png')
-            // }
-            // else if(idade <= 65)
-            // {
-            //     img.setAttribute('src', './imagens/foto-adulto-f.png')
-            // }
-            // else
-            // {
-            //     img.setAttribute('src', './imagens/foto-idoso-f.png')
-            // }
+            if(idade >= 0 && idade <= 10)
+            {
+                img.setAttribute('src', './imagens/foto-bebe-f.png')
+            }
+            else if(idade <= 21)
+            {
+                img.setAttribute('src', './imagens/foto-jovem-f.png')
+            }
+            else if(idade <= 65)
+            {
+                img.setAttribute('src', './imagens/foto-adulto-f.png')
+            }
+            else
+            {
+                img.setAttribute('src', './imagens/foto-idoso-f.png')
+            }
         }
     }
-    
+
     res.style.textAlign = 'center' //muda direto sem ter q mecher com o CSS
-    res.innerHTML = `Detectou-se ${genero} com ${idade} anos.`
-    res.appendChild(img)
+    res.innerHTML = `Detectou-se ${genero} com ${idade} anos.<br></br>`//quebrar linha para a imagem não bugar
+    res.appendChild(img)//adicionar elementos
+    
 }
