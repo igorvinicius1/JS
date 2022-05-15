@@ -1,0 +1,36 @@
+body
+{
+    background-image: linear-gradient(45deg, rgba(148, 14, 14, 0.836), rgba(204, 42, 42, 0.836), rgba(230, 90, 90, 0.836));
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+section
+{
+    background-color: white;
+    border-radius: 8px 8px;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 2px 3px rgba(56, 55, 55, 0.541);
+}
+
+
+a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+footer
+{
+    padding: 5px;
+}
+
+#res
+{
+    text-align: left;
+    padding: 7px;
+}
