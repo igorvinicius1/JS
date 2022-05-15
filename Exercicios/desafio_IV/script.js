@@ -17,7 +17,7 @@ function calcular()
         {
             var item = document.createElement('option')
             item.text = `${number} x ${cont} = ${number*cont}`
-            tab.appendChild(item)
+            tab.appendChild(item) //acrescenta 'item' ao select q possui o id=tab
         }
     }
     
